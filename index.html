@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Commander.io - A Universal Remote Control For The Mobile Internet of Things - Mobile Camp LA 2015</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/tomorrow.css">
+
+    <link rel="stylesheet" href="css/hybrid.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>Commander.io</h1>
+          <h2>A Universal Remote Control For Robots and the Internet of Things</h2>
+        </section>
+
+        <section>
+          <h2>Good Morning</h2>
+        </section>
+
+        <section>
+          <h2>This is #mobilecampla</h2>
+        </section>
+
+        <section>
+          <h2>I am @deadprogram</h2>
+        </section>
+
+        <section>
+          <h2>Ringleader</h2>
+          <h3>@hybrid_group</h3>
+        </section>
+
+        <section>
+          <div class="image-container">
+            <img src="images/thg-logo.png">
+          </div>
+          <h3>hybridgroup.com</h3>
+        </section>
+
+        <section>
+          <div class="image-container">
+            <img src="images/kidsruby-logo.png">
+          </div>
+          <h3>kidsruby.com</h3>
+        </section>
+
+        <section>
+          <h2>Full Stack Robotics</h2>
+        </section>
+
+        <section data-background="images/robot-pancakes.gif">
+          <h2>Full Stack Robotics?</h2>
+        </section>
+
+        <section>
+          <div class="image-container">
+            <img src="images/diagram-solution-of-things.png">
+          </div>
+        </section>
+
+        <section>
+          <h2>Starring</h2>
+          <div class="image-container">
+            <img src="images/commander-logo.png">
+          </div>
+        </section>
+
+        <section>
+          <h2>Also starring</h2>
+          <div class="image-container">
+            <img src="images/cylonjs-logo.png">
+          </div>
+        </section>
+
+        <section>
+          <h2>A JavaScript Framework for Robotics & the Internet of Things</h2>
+        </section>
+
+        <section>
+          <h2>Multiple Hardware Devices</h2>
+        </section>
+
+        <section>
+          <h2>Different Hardware Devices</h2>
+        </section>
+
+        <section>
+          <h2>At the Same Time!</h2>
+        </section>
+
+        <section>
+          <div class="image-container">
+            <img src="images/arch-1.png">
+          </div>
+        </section>
+
+        <section>
+          <div class="image-container">
+            <img src="images/arch-2.png">
+          </div>
+        </section>
+
+        <section>
+          <section>
+            <h2>Arduino</h2>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+var Cylon = require("cylon");
+
+Cylon.robot({
+  connections: {
+    arduino: { adaptor: 'firmata', port: '/dev/ttyACM0' }
+  },
+
+  devices: {
+    led: { driver: 'led', pin: 13 }
+  },
+
+  work: function(my) {
+    every((1).second(), function() {
+      my.led.toggle();
+    });
+  }
+}).start();
+            </code></pre>
+          </section>
+
+          <section>
+            <img src="http://localhost:8080/?action=stream">  
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Choose Your Own Hardware Adventure!</h2>
+          </section>
+
+          <section>
+            <h2>To win a Sphero, tweet</h2>
+            <h2>@gosphero and @gobotio</h2>
+          </section>
+
+          <section>
+            <h2>To win a Spark Core, tweet</h2>
+            <h2>@spark_io and @gobotio</h2>
+          </section>
+
+          <section>
+            <h2>To win an AR Drone, tweet</h2>
+            <h2>@ardrone and @gobotio</h2>
+          </section>
+        </section>
+
+
+
+
+
+
+
+
+
+        <section>
+          <h2>Was that fun?</h2>
+        </section>
+
+        <section>
+          <h2>Join the Robot Evolution!</h2>
+        </section>
+
+        <section>
+          <h2>commander.io</h2>
+          <h3>@commander_io</h3>
+        </section>
+
+        <section>
+          <h2>cylonjs.com</h2>
+          <h3>@cylon</h3>
+        </section>
+
+        <section>
+          <h1>Thank you!</h1>
+          <h2>@deadprogram</h2>
+        </section>
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script src="js/hybrid.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        leap: {
+          naturalSwipe   : true,    // Invert swipe gestures
+          pointerOpacity : 0.5,      // Set pointer opacity to 0.5
+          pointerColor   : '#d80000' // Red pointer
+        },
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/leap/leap.js', async: true }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
