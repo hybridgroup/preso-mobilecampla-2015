@@ -1,17 +1,17 @@
 {
   "command_set":{
-    "name": "Edison LCD",
+    "name": "Edison Alarm System",
     "type": "list",
     "commands":[
       {
-        "label": "Turn On",
+        "label": "Alarm ON",
         "robot": "edison",
         "device": "",
         "name": "turn_on",
         "params": {}
       },
       {
-        "label": "Turn Off",
+        "label": "Alarm OFF",
         "robot": "edison",
         "device": "",
         "name": "turn_off",

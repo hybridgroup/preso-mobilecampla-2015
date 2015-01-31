@@ -20,7 +20,7 @@ Cylon.robot({
 
   turnOn: function() {
   	this.buzzer.turnOn();
-  	this.writeToScreen("ON!");
+  	this.writeToScreen("Alarm ON");
   },
 
   turnOff: function() {
