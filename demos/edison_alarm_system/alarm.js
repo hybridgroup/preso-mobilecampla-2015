@@ -14,23 +14,23 @@ Cylon.robot({
   },
 
   writeToScreen: function(message) {
-  	this.display.setCursor(0,0);
-		this.display.write(message);
+    this.display.setCursor(0,0);
+    this.display.write(message);
   },
 
   turnOn: function() {
-  	this.buzzer.turnOn();
-  	this.writeToScreen("Alarm ON");
+    this.buzzer.turnOn();
+    this.writeToScreen("Alarm ON");
     return "ok";
   },
 
   turnOff: function() {
-  	this.buzzer.turnOff();
-  	this.writeToScreen("Ready...");
+    this.buzzer.turnOff();
+    this.writeToScreen("Ready...");
     return "ok";
   },
 
-	commands: function() {
+  commands: function() {
     return {
       turn_on: this.turnOn,
       turn_off: this.turnOff
@@ -38,7 +38,7 @@ Cylon.robot({
   },
 
   work: function() {
-  	this.writeToScreen("Ready...");
+    this.writeToScreen("Ready...");
   }
 });
 

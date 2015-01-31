@@ -1,7 +1,5 @@
 var Cylon = require("cylon");
 
-Cylon.api("http");
-
 Cylon.robot({
   connections: {
     arduino: { adaptor: 'firmata', port: '/dev/ttyACM0' }
