@@ -23,13 +23,16 @@ Cylon.robot({
         my.ollie.roll(60, 180, 1);
         break;
       case "left":
-        my.ollie.roll(60, 270, 1);
+        my.ollie.setRGB(0xFF0000);
+        my.ollie.setRawMotorValues(my.ollie.MotorForward, 200, my.ollie.MotorReverse, 200);
         break;
       case "right":
-        my.ollie.roll(60, 90, 1);
+        my.ollie.setRGB(0xFF0000);
+        my.ollie.setRawMotorValues(my.ollie.MotorReverse, 200, my.ollie.MotorForward, 200);
     }
 
     setTimeout(function() {
+      my.ollie.setRGB(0x00FFFF);
       my.ollie.stop();
     }, 500);
 
