@@ -9,7 +9,7 @@ Cylon.robot({
   },
 
   devices: {
-    ollie: { driver: 'ollie'}
+    ollie: { name: 'ollie', driver: 'ollie'}
   },
 
   move: function(direction) {
@@ -17,21 +17,21 @@ Cylon.robot({
 
     switch (direction) {
       case "up":
-        my.ollie.roll(100, 0);
+        my.ollie.roll(60, 0, 1);
         break;
       case "down":
-        my.ollie.roll(100, 180);
+        my.ollie.roll(60, 180, 1);
         break;
       case "left":
-        my.ollie.roll(100, 270);
+        my.ollie.roll(60, 270, 1);
         break;
       case "right":
-        my.ollie.roll(100, 90);
+        my.ollie.roll(60, 90, 1);
     }
 
     setTimeout(function() {
       my.ollie.stop();
-    }, 2000);
+    }, 500);
 
     return "ok";
   },
