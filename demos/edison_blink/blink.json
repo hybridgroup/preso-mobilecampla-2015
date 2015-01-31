@@ -1,6 +1,6 @@
 {
   "command_set":{
-    "name": "Arduino Command List",
+    "name": "Edison Command List",
     "type": "list",
     "commands":[
       {
