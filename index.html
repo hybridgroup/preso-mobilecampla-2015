@@ -75,6 +75,26 @@
         </section>
 
         <section>
+          <h2>The Mobile Internet Of Things</h2>
+        </section>
+
+        <section>
+          <h2>Starring</h2>
+          <div class="image-container">
+            <img src="images/commander-logo.png">
+          </div>
+          <h3>commander.io</h3>
+        </section>
+
+        <section>
+          <h2>Also starring</h2>
+          <div class="image-container">
+            <img src="images/cylonjs-logo.png">
+          </div>
+          <h3>cylonjs.com</h3>
+        </section>
+
+        <section>
           <h2>Full Stack Robotics</h2>
         </section>
 
@@ -89,33 +109,9 @@
         </section>
 
         <section>
-          <h2>Starring</h2>
-          <div class="image-container">
-            <img src="images/commander-logo.png">
-          </div>
-        </section>
-
-        <section>
-          <h2>Also starring</h2>
           <div class="image-container">
             <img src="images/cylonjs-logo.png">
           </div>
-        </section>
-
-        <section>
-          <h2>A JavaScript Framework for Robotics & the Internet of Things</h2>
-        </section>
-
-        <section>
-          <h2>Multiple Hardware Devices</h2>
-        </section>
-
-        <section>
-          <h2>Different Hardware Devices</h2>
-        </section>
-
-        <section>
-          <h2>At the Same Time!</h2>
         </section>
 
         <section>
@@ -132,7 +128,7 @@
 
         <section>
           <section>
-            <h2>Arduino</h2>
+            <h2>Edison - Blink</h2>
           </section>
 
           <section>
@@ -140,8 +136,9 @@
 var Cylon = require("cylon");
 
 Cylon.robot({
+  name: "edison",
   connections: {
-    arduino: { adaptor: 'firmata', port: '/dev/ttyACM0' }
+    edison: { adaptor: 'intel-iot' }
   },
 
   devices: {
@@ -162,6 +159,147 @@ Cylon.robot({
           </section>
         </section>
 
+
+        <section>
+          <div class="image-container">
+            <img src="images/commander-logo.png">
+          </div>
+        </section>
+
+        <section>
+          <div class="image-container">
+            <img src="images/phonegap-logo.png">
+          </div>
+        </section>
+
+        <section>
+          <div class="image-container">
+            <img src="images/ionic-logo.svg">
+          </div>
+        </section>
+
+
+        <section>
+          <section>
+            <h2>Command Set</h2>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+{
+  "command_set":{
+    "name": "Edison Alarm System",
+    "type": "list",
+    "commands":[
+      {
+        "label": "Alarm ON",
+        "robot": "edison",
+        "device": "",
+        "name": "turn_on",
+        "params": {}
+      },
+      {
+        "label": "Alarm OFF",
+        "robot": "edison",
+        "device": "",
+        "name": "turn_off",
+        "params": {}
+      }
+    ]
+  }
+}            
+            </code></pre>
+          </section>
+        </section>
+
+
+        <section>
+          <section>
+            <h2>Edison - Alarm System</h2>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+var Cylon = require("cylon");
+
+Cylon.api("http", {host: "0.0.0.0", ssl: false});
+
+Cylon.robot({
+  name: "edison",
+  connections: {
+    edison: { adaptor: 'intel-iot' }
+  },
+
+  devices: {
+    buzzer: { driver: 'led', pin: 4 },
+    display: { driver: 'upm-jhd1313m1'}
+  },
+
+  writeToScreen: function(message) {
+    this.display.setCursor(0,0);
+    this.display.write(message);
+  },
+
+  turnOn: function() {
+    this.buzzer.turnOn();
+    this.writeToScreen("Alarm ON");
+    return "ok";
+  },
+
+  turnOff: function() {
+    this.buzzer.turnOff();
+    this.writeToScreen("Ready...");
+    return "ok";
+  },
+
+  commands: function() {
+    return {
+      turn_on: this.turnOn,
+      turn_off: this.turnOff
+    };
+  },
+
+  work: function() {
+    this.writeToScreen("Ready...");
+  }
+});
+
+Cylon.start();
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+{
+  "command_set":{
+    "name": "Edison Alarm System",
+    "type": "list",
+    "commands":[
+      {
+        "label": "Alarm ON",
+        "robot": "edison",
+        "device": "",
+        "name": "turn_on",
+        "params": {}
+      },
+      {
+        "label": "Alarm OFF",
+        "robot": "edison",
+        "device": "",
+        "name": "turn_off",
+        "params": {}
+      }
+    ]
+  }
+}
+            </code></pre>
+          </section>
+
+          <section>
+            <img src="http://localhost:8080/?action=stream">  
+          </section>
+        </section>
+
         <section>
           <section>
             <h2>Choose Your Own Hardware Adventure!</h2>
@@ -169,27 +307,125 @@ Cylon.robot({
 
           <section>
             <h2>To win a Sphero, tweet</h2>
-            <h2>@gosphero and @gobotio</h2>
+            <h2>@gosphero and @cylonjs</h2>
           </section>
 
           <section>
             <h2>To win a Spark Core, tweet</h2>
-            <h2>@spark_io and @gobotio</h2>
-          </section>
-
-          <section>
-            <h2>To win an AR Drone, tweet</h2>
-            <h2>@ardrone and @gobotio</h2>
+            <h2>@spark_io and @cylonjs</h2>
           </section>
         </section>
 
+        <section>
+          <section>
+            <h2>Ollie - Spin</h2>
+          </section>
 
+          <section>
+            <pre><code data-trim>
+var Cylon = require('cylon');
 
+Cylon.api("http", {host: "0.0.0.0", ssl: false});
 
+Cylon.robot({
+  name: 'olliebot',
+  connections: {
+    bluetooth: { adaptor: 'central', uuid: 'cc360e85785e', module: 'cylon-ble'}
+  },
 
+  devices: {
+    ollie: { name: 'ollie', driver: 'ollie'}
+  },
 
+  move: function(direction) {
+    var my = this;
 
+    switch (direction) {
+      case "up":
+        my.ollie.roll(60, 0, 1);
+        break;
+      case "down":
+        my.ollie.roll(60, 180, 1);
+        break;
+      case "left":
+        my.ollie.setRGB(0xFF0000);
+        my.ollie.setRawMotorValues(my.ollie.MotorForward, 200, my.ollie.MotorReverse, 200);
+        break;
+      case "right":
+        my.ollie.setRGB(0xFF0000);
+        my.ollie.setRawMotorValues(my.ollie.MotorReverse, 200, my.ollie.MotorForward, 200);
+    }
 
+    setTimeout(function() {
+      my.ollie.setRGB(0x00FFFF);
+      my.ollie.stop();
+    }, 500);
+
+    return "ok";
+  },
+
+  commands: function() {
+    return {
+      move: this.move
+    };
+  },
+
+  work: function(my) {
+    my.ollie.wake(function(err, data){
+      after(200, function() {
+        my.ollie.setRGB(0x00FFFF);
+      });
+    });
+  }
+}).start();
+            </code></pre>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+{
+  "command_set":{
+    "name": "Olliebot",
+    "type": "d-pad",
+    "commands":[
+      {
+        "label": "Up",
+        "robot": "olliebot",
+        "device": "",
+        "name": "move",
+        "params":{"direction":"up"}
+      },
+      {
+        "label": "Down",
+        "robot": "olliebot",
+        "device": "",
+        "name": "move",
+        "params":{"direction":"down"}
+      },
+      {
+        "label": "Left",
+        "robot": "olliebot",
+        "device": "",
+        "name": "move",
+        "params":{"direction":"left"}
+      },
+      {
+        "label": "Right",
+        "robot": "olliebot",
+        "device": "",
+        "name": "move",
+        "params":{"direction":"right"}
+      }
+    ]
+  }
+}
+            </code></pre>
+          </section>
+
+          <section>
+            <img src="http://localhost:8080/?action=stream">  
+          </section>
+        </section>
 
         <section>
           <h2>Was that fun?</h2>
@@ -201,12 +437,11 @@ Cylon.robot({
 
         <section>
           <h2>commander.io</h2>
-          <h3>@commander_io</h3>
         </section>
 
         <section>
           <h2>cylonjs.com</h2>
-          <h3>@cylon</h3>
+          <h3>@cylonjs</h3>
         </section>
 
         <section>
