@@ -21,11 +21,13 @@ Cylon.robot({
   turnOn: function() {
   	this.buzzer.turnOn();
   	this.writeToScreen("Alarm ON");
+    return "ok";
   },
 
   turnOff: function() {
   	this.buzzer.turnOff();
   	this.writeToScreen("Ready...");
+    return "ok";
   },
 
 	commands: function() {
