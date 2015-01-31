@@ -1,0 +1,29 @@
+{
+  "command_set":{
+    "name": "Arduino Command List",
+    "type": "list",
+    "commands":[
+      {
+        "label": "Turn On Led",
+        "robot": "edison",
+        "device": "led",
+        "name": "turn_on",
+        "params": {}
+      },
+      {
+        "label": "Turn Off Led",
+        "robot": "edison",
+        "device": "led",
+        "name": "turn_off",
+        "params": {}
+      },
+      {
+        "label": "Toggle Led",
+        "robot": "edison",
+        "device": "led",
+        "name": "toggle",
+        "params": {}
+      }
+    ]
+  }
+}
