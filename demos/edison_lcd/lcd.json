@@ -1,0 +1,22 @@
+{
+  "command_set":{
+    "name": "Edison LCD",
+    "type": "list",
+    "commands":[
+      {
+        "label": "Turn On",
+        "robot": "edison",
+        "device": "",
+        "name": "turn_on",
+        "params": {}
+      },
+      {
+        "label": "Turn Off",
+        "robot": "edison",
+        "device": "",
+        "name": "turn_off",
+        "params": {}
+      }
+    ]
+  }
+}
